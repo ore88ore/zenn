@@ -3,7 +3,7 @@ title: "Colima で Docker と Docker Compose を使ってみた"
 emoji: "📦"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["docker", "dockercompose", "colima"]
-published: false
+published: true
 ---
 
 [Colima](https://github.com/abiosoft/colima) は、Dockerコンテナを管理するためのコマンドラインインターフェース（CLI）です。

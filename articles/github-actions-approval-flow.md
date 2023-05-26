@@ -3,7 +3,7 @@ title: "GitHub Actions の environments を使ってデプロイ時に承認プ�
 emoji: "🕌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["githubactions", "cicd"]
-published: false
+published: true
 ---
 
 継続的デリバリーを実現するために、GitHub Actions を使用しているプロジェクトが多くありますよね。特に、開発環境、検証環境、本番環境など、目的に応じて複数の環境を持つプロジェクトもあります。そのような場合には、本番環境に関しては特定の人（例えば○○さんや○○チーム）の承認がなければデプロイができないという要件が生じることもあると思います。そこで、GitHub Actions の [environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment) 機能を利用して、このような承認プロセスを導入する方法を紹介します。
@@ -49,6 +49,8 @@ environment の設定で、`Required reviewers` のチェックを ON にして�
 
 ワークフロー中の各ジョブは、１つの環境を使用することができます。（今回の例だと `production` または `staging`）ワークフロー内の `jobs.<job_id>.environment` キーに environment 名を指定することで利用することができます。
 
+environment を `staging` にすると `Required reviwers` が OFF になっているので、通常のワークフローの実行と同様にトリガーされると実行されました。一方で以下のように `production` に設定した場合は `Required reviwers` を ON に設定してあるので、どうのような動作になるかを確認してみます。
+
 ```yml
 name: Deployment
 
@@ -79,7 +81,7 @@ jobs:
 *レビューNGの場合*
 
 レビューを放置したらどうでしょうか？（基本的にはないですよね？）
-[公式ドキュメント](https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments#about-required-reviews-in-workflows)に記載されていますが、30日以内に承認されないジョブは自動的に失敗するようです。
+[公式ドキュメント](https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments#about-required-reviews-in-workflows)に記載されていますが、30日以内に承認されないジョブは自動的に失敗（ステータスが `Failure`）するようです。
 
 ## さいごに
 比較的簡単に承認プロセスを導入することができて、使える機能だなぁと感じました。本番環境にデプロイする際は、複数人で実行するとか、承認を記録するとか working agreement などで定めているチームなんかもあるかと思います。そういった用途に使えそうな機能だと思います。既存のワークフローにも簡単に組み込めるのもいいですね。用途に合致するのであれば、ぜひ使ってみてください。
