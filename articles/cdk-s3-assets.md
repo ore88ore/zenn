@@ -3,7 +3,7 @@ title: "AWS CDKでS3にAssetsを配置する"
 emoji: "🐙"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "awscdk"]
-published: false
+published: true
 ---
 
 CDK でアプリケーションやコンテナなどで利用する設定ファイルをアクセス可能な場所に配置したいと思って調べてみたところ、 [Assets](https://docs.aws.amazon.com/cdk/v2/guide/assets.html) が利用できそうでしたので、Amazon S3 assets を利用して、S3 バケットに Assets （今回の例だとファイル）を配置してみます。
