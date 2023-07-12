@@ -3,7 +3,7 @@ title: "FireLens for Amazon ECS を利用してコンテナのログをルーテ
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "awscdk", "fargate", "fluentbit"]
-published: false
+published: true
 ---
 
 Fargate で実行しているコンテナのログを、FireLens を利用して CloudWatch Logs と S3(Kinesis Data Firehose を経由させて) にログをルーティングしてみました。ログのルーティングは AWS が提供してくれている [Fluent Bit イメージ](https://gallery.ecr.aws/aws-observability/aws-for-fluent-bit)を利用し、サイドカーパターンで配置します。これらのリソースの実装を CDK を利用して実装していきます。
@@ -77,7 +77,7 @@ https://github.com/ore88ore/cdk-ecs-firelens-sample/tree/main
 
 ### S3 にアセットを作成
 
-設定ファイルを S3 に配置するためにアセットを作成します。また、配置したファイルを読み込むために[タスク IAM ロール](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/task-iam-roles.html)に読み取り権限を付与します。（タスク実行 IAM ロールではありません）
+設定ファイルを S3 に配置するためにアセットを作成します。また、配置したファイルを読み込むために[タスク IAM ロール](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/task-iam-roles.html)に読み取り権限を付与します。（**タスク実行 IAM ロールではありません**）
 
 ```typescript
     // アセットを作成
