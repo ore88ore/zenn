@@ -3,7 +3,7 @@ title: "Step Functions と EventBridge Scheduler を用いて ECS タスクを�
 emoji: "🙌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "awscdk", "ecs", "fargate", "stepfunctions"]
-published: false
+published: true
 ---
 
 ## はじめに
