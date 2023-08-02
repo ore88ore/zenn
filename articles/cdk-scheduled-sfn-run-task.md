@@ -252,3 +252,6 @@ ECS タスクに入力パラメータを渡して実行する Step Functions と
 ## さいごに
 
 ECR タスクを定期的に実行するだけだと、EventBridge Scheduler から直接 ECR タスクを呼び出して実行することもできます。ですが、今回のようにバッチ１を実行してからバッチ２を実行する。といったように実行の順序などを制御したい場合や、バッチの起動前後に処理をはさみたい、バッチの処理結果によって異なるバッチを実行したい場合など、ECR タスクの実行を Step Functions を挟んで実行するのが良さそうかなと思いました。
+
+今回実装したソース一式は以下のリポジトリにて確認することができます。
+https://github.com/ore88ore/go-cli-sample/tree/cdk-scheduled-sfn-run-task/cdk
