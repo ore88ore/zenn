@@ -27,9 +27,9 @@ Step Functions と EventBridge Scheduler を使って ECS タスクを定期実�
 - TypeScript: `5.1.6`
 - CDK: `2.86.0`
 
-## CDK によるStep Functions の定義
+## CDK で Step Functions と ECS タスクを定義
 
-まずはスケジュール実行するターゲットの Step Functions と Step Functions から呼び出す ECR タスクを作成します。
+まずはスケジュール実行するターゲットの Step Functions と Step Functions から呼び出す ECS タスクを作成します。
 ECR タスクで実行するコンテナは、実行時の引数と環境変数を出力するだけのプログラム(Go)を ECR リポジトリにプッシュしたコンテナを利用します。
 今回は一つずつ ECS タスクを実行しやすいように、ECS タスク毎に Step Functions を作成することにしました。複数の ECS タスクを実行する際は１つの ECS タスクを実行する Step Functions を Step Functions から呼ぶように実装しています。
 
@@ -194,7 +194,7 @@ https://docs.aws.amazon.com/ja_jp/step-functions/latest/dg/connect-ecs.html
 
 https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_stepfunctions-readme.html#passing-parameters-to-tasks
 
-## CDK による EventBridge Scheduler の定義
+## CDK で EventBridge Scheduler を定義
 
 複数の ECS タスクを実行する Step Functions を作成することができたので、この処理を定期的に実行できるように、EventBridge Scheduler を作成します。
 
@@ -229,7 +229,7 @@ https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_stepfunctions-readme
 
 https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_scheduler-readme.html
 
-## AWS CDKによるリソースのデプロイ
+## リソースのデプロイ
 
 これまで作成したリソースをデプロイして、作成されたリソースを確認します。
 
