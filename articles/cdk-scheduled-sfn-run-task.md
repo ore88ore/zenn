@@ -30,7 +30,7 @@ Step Functions と EventBridge Scheduler を使って ECS タスクを定期実�
 ## CDK で Step Functions と ECS タスクを定義
 
 まずはスケジュール実行するターゲットの Step Functions と Step Functions から呼び出す ECS タスクを作成します。
-ECR タスクで実行するコンテナは、実行時の引数と環境変数を出力するだけのプログラム(Go)を ECR リポジトリにプッシュしたコンテナを利用します。
+ECS タスクで実行するコンテナは、実行時の引数と環境変数を出力するだけのプログラム(Go)を ECR リポジトリにプッシュしたコンテナを利用します。
 今回は一つずつ ECS タスクを実行しやすいように、ECS タスク毎に Step Functions を作成することにしました。複数の ECS タスクを実行する際は１つの ECS タスクを実行する Step Functions を Step Functions から呼ぶように実装しています。
 
 ![](/images/cdk-scheduled-sfn-run-task/step-functions-architecture.png)
