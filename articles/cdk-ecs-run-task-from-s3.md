@@ -3,7 +3,7 @@ title: "S3 イベント通知を使って ECS タスクを実行する"
 emoji: "🔖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "awscdk", "ecs", "eventbridge", "s3"]
-published: false
+published: true
 ---
 
 ## はじめに
@@ -14,7 +14,7 @@ S3 バケットに特定のファイルがアップロードされた際に、EC
 - イベントの送信先は EventBridge を利用する
 - ECS タスクは Step Functions から呼び出す
 - ECS タスク実行時の引数で作成されたオブジェクトのキーを受け取る
-- CDKでリソースを構築する
+- CDK でリソースを構築する
   
 作成するアーキテクチャは以下のようなイメージとなります。
 
@@ -206,3 +206,6 @@ https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-patterns-best-
 ## さいごに
 S3 イベント通知を使用して、特定のフォルダにファイルがアップロードされた時に ECS タスクを自動で実行することができました。配置されたファイルを読み込んでバッチ処理をする際に利用できそうな構成かと思います。処理の内容に応じて Lambda を選択するのもいいかなぁと思います。
 CDK を使用することで、このようなシステムを簡単に構築できるので、是非試してみてください。
+
+今回実装したソース一式は以下のリポジトリにて確認することができます。
+https://github.com/ore88ore/go-cli-sample/tree/cdk-ecs-run-task-from-s3
