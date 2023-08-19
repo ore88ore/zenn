@@ -2,7 +2,7 @@
 title: "S3 イベント通知を使って ECS タスクを実行する"
 emoji: "🔖"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["aws", "awscdk", "ecs", "fargate", "stepfunctions", "eventbridge", "s3"]
+topics: ["aws", "awscdk", "ecs", "eventbridge", "s3"]
 published: false
 ---
 
