@@ -129,10 +129,8 @@ $ cdk bootstrap --template custom-template.yaml
 
 #### bootstrap コマンドの custom-permissions-boundary オプションは使えないの？
 
-`custom-permissions-boundary` で、Bootstrap 時に設定する Permissions Boundary を設定することができます。
-ただし、指定した Permissions Boundary が設定されるのは、`CloudFormationExecutionRole` のみとなります。
-今回のサンプルでは、すべての IAM Role に Permissions Boundary を設定する必要がありましたので、合致しませんでした。。。
-要件に合致するようなら、以下のようなコマンドで簡単に Permissions Boundary を設定することができます。
+`custom-permissions-boundary` で、Bootstrap 時に設定する Permissions Boundary を設定することができます。ただし、指定した Permissions Boundary が設定されるのは、`CloudFormationExecutionRole` のみとなります。
+今回のサンプルでは、すべての IAM Role に Permissions Boundary を設定する必要がありましたので、合致しませんでした。。。（残念！）要件に合致するようなら、以下のようなコマンドで簡単に Permissions Boundary を設定することができます。
 
 ```
 $ cdk bootstrap --custom-permissions-boundary role-permissions-boundary
