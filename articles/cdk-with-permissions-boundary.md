@@ -3,7 +3,7 @@ title: "CDK で Permissions Boundary を設定するよ"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "awscdk", "iam"]
-published: false
+published: true
 publication_name: "yumemi_inc"
 ---
 
