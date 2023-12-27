@@ -3,7 +3,8 @@ title: "Next.js で API を実装してみた"
 emoji: "😽"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nextjs"]
-published: false
+published: true
+publication_name: "yumemi_inc"
 ---
 
 ## はじめに
