@@ -213,7 +213,7 @@ GET /users query=hoge   // アプリの実装でログ出力した内容
 
 https://github.com/vercel/next.js/tree/canary/examples/with-docker
 
-```text:Dockerfile
+```docker:Dockerfile
 FROM node:20-alpine AS base
 
 # Install dependencies only when needed
