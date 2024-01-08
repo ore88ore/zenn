@@ -3,7 +3,8 @@ title: "負荷テストツール k6 の基本的な使い方"
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["負荷テスト", "k6"]
-published: false
+published: true
+publication_name: "yumemi_inc"
 ---
 
 ## はじめに
