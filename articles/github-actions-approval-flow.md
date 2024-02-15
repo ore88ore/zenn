@@ -29,7 +29,7 @@ environments は、GitHub Actions 内で特定の環境を定義し、ワーク�
 ### environment を作成する
 
 リポジトリから [Settings] → [Environments] と進み、[New environment] から、environment を作成します。
-今回は、`productions` と `staging` を作成します。
+今回は、`production` と `staging` を作成します。
 
 ![](/images/github-actions-approval-flow/env-name.png)
 *environment 名を入力*
