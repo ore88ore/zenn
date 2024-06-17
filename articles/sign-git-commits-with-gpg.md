@@ -2,7 +2,7 @@
 title: "Mac で GPG を使って Git のコミットを署名する設定"
 emoji: "💨"
 type: "tech"
-topics: []
+topics: ["git", "github"]
 published: true
 ---
 
