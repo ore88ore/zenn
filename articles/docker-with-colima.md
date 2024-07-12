@@ -37,6 +37,10 @@ $ docker-compose --version
 $ Docker Compose version 2.17.3
 ```
 
+※ 公式のバイナリからインストールしたい場合は、以下の手順でインストールすることができます。
+
+https://qiita.com/ore88ore/items/d3fe5da8ddf49e60cee6
+
 ### Colima をインストールする
 
 次のコマンドを実行してColimaをインストールできます。インストールの詳細については[公式ドキュメント](https://github.com/abiosoft/colima#installation)を確認ください。
